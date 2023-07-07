@@ -2,7 +2,10 @@ import Nav from './components/Nav'
 import './globals.css'
 import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({ subsets: ['latin'],})
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <main className='max-w-[1440] mx-auto'>
+        <main className='max-w-[1440] mx-auto relative z-10 flex flex-col items-center justify-center px-4 sm:px-8'>
           <Nav />
           {children}
         </main>
