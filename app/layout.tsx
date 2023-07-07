@@ -1,8 +1,8 @@
 import Nav from './components/Nav'
 import './globals.css'
-import { Roboto } from 'next/font/google'
+import { Oxygen } from 'next/font/google'
 
-const roboto = Roboto({
+const oxygen = Oxygen({
   subsets: ['latin'],
   weight: ['400', '700'],
 })
@@ -19,8 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <main className='max-w-[1440] mx-auto relative z-10 flex flex-col items-center justify-center px-4 sm:px-8'>
+      <body className={oxygen.className}>
+        <main className='max-w-[1440] mx-auto relative z-10  min-h-screen flex flex-col items-center '>
           <Nav />
           {children}
         </main>

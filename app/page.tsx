@@ -1,34 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Nav from './components/Nav'
 
 export default function Home() {
   return (
-   <section id="hero"
-   className="w-full flex-center flex-col">
-      <h1>
-        {" "}
-        Optimize Your Online Experience with Our <br />
-        Advanced{" "}
-        <span className="blue-text">
-          <u>URL Shortening</u>
-        </span>{" "}
-        Solution
-      </h1>
-      <p>
-        Personalize your shortened URLs to align with your brand identity.
-        Utilize custom slugs, branded links, and domain customization options to
-        reinforce your brand presence and enhance user engagement.
-      </p>
-      <div id="hero-btns">
-        <Link href='/register'>
-          <button className="">Sign Up</button>
-        </Link>
-        <button className="">Learn more</button>
-      </div>
-      <div id="hero-imgs">
-        {/* <img src="/images/Frame 29546.png" alt="" />
-        <img src="/images/Group 3.png" alt="" /> */}
-      </div>
+   <>
+    {/* <section id='features'className='h-screen '>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis sed facilis ab, ullam vel repellat neque repudiandae, esse dolorem et a doloribus debitis? Minus corrupti voluptates optio cum numquam.
     </section>
+    <section id='faqs' className='bg-grey-100 h-screen'>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ipsam culpa optio ullam! Dicta dolorum sed a laborum, labore, pariatur recusandae quidem officia officiis doloribus ipsa dolor, illo laudantium id.
+    </section>
+    <section id='pricing'className='bg-cyan-100 h-screen'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quo minus qui, dolorem quia ipsa eos tenetur voluptas, tempore quis consequatur, vel debitis assumenda iusto natus et libero. Voluptas, maxime?</section>
+    <section id='urlshortner'className='bg-blue-100 h-screen'
+    >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur culpa magnam quasi itaque placeat cupiditate nam, fugit corrupti porro, excepturi minus sed odio, aspernatur quod! Illum corrupti tempora fugit sint.</section> */}
+   </>
   )
 }
