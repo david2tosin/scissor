@@ -2,6 +2,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { cn } from "../utils"
 
 const Nav = () => {
 
@@ -82,13 +83,12 @@ const Nav = () => {
         </button>
       </div>
 
-      <div className={
-        menuOpen ?
-        "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-slate-300 p-10 ease-in duration-500"
-        :"fixed left-[100%] top-0 p-10 ease-in duration-500"
-      }>
-
-      </div>
+     <div
+        className={cn(
+          "fixed left-0 w-3/4 sm:hidden h-screen -translate-x-full z-50 bg-blue-600 top-0 p-10 ease-in duration-500",
+          { "translate-x-0": menuOpen }
+        )}
+      ></div>
 
    </nav>
   )
