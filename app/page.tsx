@@ -145,6 +145,117 @@ export default function Home() {
         </div>
      </section>
 
+     <section id='features' className='mt-[50px]'>
+      <div className='flex flex-col justify-between max-w-5xl mx-auto bg-slate-100 md:flex-row gap-10 px-4 py-8'>
+            <h2 className="font-bold text-3xl lg:text-4xl">
+              One Stop. <br />
+              Four <span className="text-blue-600">Possibilities</span>.
+            </h2>
+
+            <div className="grid grid-cols-2  md:grid-cols-4 gap-6">
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold text-2xl lg:text-4xl">3M</span>
+                <span className="font-medium">Active users</span>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold text-2xl lg:text-4xl">60M</span>
+                <span className="font-medium">
+                  Links & QR <br />
+                  codes created
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold text-2xl lg:text-4xl">1B</span>
+                <span className="font-medium">
+                  Clicked & Scanned <br /> connections
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold text-2xl lg:text-4xl">300k</span>
+                <span className="font-medium">App Integrations</span>
+              </div>
+            </div>
+          </div>
+
+          <div className='flex flex-col justify-between max-w-5xl mx-auto md:flex-row gap-10 px-4 py-32'>
+            <div className='space-y-4'>
+              <h2 className="font-bold text-3xl lg:text-4xl">
+                Why choose <span className="text-blue-600">Scissors</span>
+              </h2>
+              <p className='font-medium text-base'>
+                Scissors is the hub of everything that has to do with your link management. We shorten your URLs, allow you creating custom ones for your personal, business, event usage. Our swift QR code creation, management and usage tracking with advance analytics for all of these is second to none.
+              </p>
+            </div>
+
+            <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 lg:mt-0">
+              <div>
+                <Image
+                  src='/url.svg'
+                  alt='url image'
+                  width={35}
+                  height={35}
+                />
+                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                  URL Shortening
+                </h3>
+                <p className="font-medium">
+                  Scissor allows you to shorten URLs of your business, events.
+                  Shorten your URL at scale, URL redirects.
+                </p>
+              </div>
+
+              <div>
+                <Image
+                  src='/custom.svg'
+                  alt='custom image'
+                  width={35}
+                  height={35}
+                />
+                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                  Custom URLs
+                </h3>
+                <p className="font-medium">
+                  With Scissor, you can create custom URLs, with the length you
+                  want! A solution for socials and businesses.
+                </p>
+              </div>
+
+              <div>
+                <Image
+                  src='/qr.svg'
+                  alt='qr code image'
+                  width={35}
+                  height={35}
+                />
+                <h3 className="text-2xl lg:text-3xl font-semibold my-4">QR Codes</h3>
+                <p className="font-medium">
+                  Generate QR codes to your business, events. Bring your audience
+                  and customers to your doorstep with this scan and go solution.
+                </p>
+              </div>
+
+              <div>
+                <Image
+                src='/analytics.svg'
+                alt='analytics image'
+                width={35}
+                height={35}
+                />
+                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                  Data Analytics
+                </h3>
+                <p className="font-medium">
+                  Receive data on the usage of either your shortened URL, custom
+                  URLs or generated QR codes. Embedded to monitor progress.
+                </p>
+              </div>
+            </div>
+          </div>
+     </section>
+
    </>
   )
 }
