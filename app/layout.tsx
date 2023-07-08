@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={oxygen.className}>
-        <main className='max-w-[1440] mx-auto relative z-10  min-h-screen flex flex-col items-center '>
+        <main className='relative min-h-screen '>
           <Nav />
           {children}
         </main>
