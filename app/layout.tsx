@@ -1,11 +1,6 @@
 import Nav from './components/Nav'
 import './globals.css'
-import { Oxygen } from 'next/font/google'
-
-const oxygen = Oxygen({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-})
+import { gilroy } from './styles/fonts'
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={oxygen.className}>
+      <body className={gilroy.className}>
         <main className='relative min-h-screen '>
           <Nav />
           {children}
