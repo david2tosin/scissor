@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Nav from './components/Nav'
 import './globals.css'
 import { gilroy } from './styles/fonts'
@@ -18,6 +19,7 @@ export default function RootLayout({
         <main className='relative min-h-screen '>
           <Nav />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

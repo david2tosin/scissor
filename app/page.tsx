@@ -22,7 +22,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex justify-center gap-2 ml-10 font-semibold">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-100 transition-colors">
+            <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors">
               Sign up
             </button>
 
@@ -255,6 +255,119 @@ export default function Home() {
             </div>
           </div>
      </section>
+
+      <section id='pricing' className='max-w-5xl mx-auto px-4 py-10 flex flex-col justify-center items-center gap-4'>
+        <section className='items-center'>
+          <h2 className="font-bold text-3xl text-center leading-loose lg:text-4xl">
+            A <span className="text-blue-600">price perfect</span> for your needs.
+          </h2>
+          <p className='font-medium text-base text-center leading-loose'>
+            From catering for your personal, business, event, socials needs, you
+            can be rest assured we have you in mind in our pricing.
+          </p>
+        </section>
+        <section className='text-neutral-900 mx-auto p-6 md:flex justify-center'>
+          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
+            <div className='my-4'>
+              <p className='font-medium'>Basic</p>
+              <h2 className='font-bold text-4xl'>Free</h2>
+              <h3 className='font-medium text-xl'>Free plan for all users</h3>
+            </div>
+            <ul className='font-medium text-base'>
+              <li className="m-2">
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Unlimited URL Shortening
+              </li>
+              <li className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Basic Link Analytics
+              </li>
+              <li className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Customizable Short Links
+              </li>
+              <li className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Standard Support
+              </li>
+              <li className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Ad-supported
+              </li>
+            </ul>
+          </div>
+          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
+            <div className='my-4'>
+              <p className='font-medium'>Professional</p>
+              <h2 className='font-bold text-4xl'>$15/month</h2>
+              <h3 className='font-medium text-xl'>Ideal for business creators</h3>
+            </div>
+            <div className='font-medium text-base'>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Enhanced Link Analytics
+              </span>
+              <span className="m-2">
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Custom Branded Domains
+              </span>
+              <span className="m-2">
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Advanced Link Customization
+              </span>
+              <span className="m-2">
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Priority Support
+              </span>
+              <span className="m-2">
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Ad-free Experience
+              </span>
+            </div>
+          </div>
+
+          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
+            <div className='my-4'>
+              <p className='font-medium'>Teams</p>
+              <h2 className='font-bold text-4xl'>$25/month</h2>
+              <h3 className='font-medium text-xl'>Share with up to 10 users</h3>
+            </div>
+            <div className='font-medium text-base'>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Team Collaboration
+              </span>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                User Roles and Permissions
+              </span>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Enhanced Security
+              </span>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                API Access
+              </span>
+              <span className="m-2">
+                {" "}
+                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
+                Dedicated Account Manager
+              </span>
+            </div>
+          </div>
+        </section>
+        <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors">Select Pricing</button>
+    </section>
 
    </>
   )
