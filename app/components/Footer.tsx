@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="text-neutral-800 bg-slate-100 ">
-      <div className="w-full px-4 py-10 bg-slate-800  flex flex-col items-center">
+    <footer className="text-neutral-800 bg-slate-100">
+      <div className="w-full px-4 py-10 bg-slate-800 flex flex-col items-center">
         <h1 className="font-bold text-2xl lg:text-4xl text-center text-neutral-100 leading-loose">
           Revolutionizing Link Optimization
         </h1>
@@ -13,7 +13,7 @@ const Footer = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-6 sm:px-8 px-5 py-10 mx-auto">
+      <div className="max-w-7xl grid grid-cols-1 md:grid-cols-5 gap-6 sm:px-8 px-5 py-10 mx-auto">
         <div className="flex flex-col gap-1 row-span-2 order-last md:order-first">
           <Link
             href="/"
@@ -64,6 +64,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Why Scissor</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -76,6 +77,7 @@ const Footer = () => {
             Pricing
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Resources</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -88,7 +90,7 @@ const Footer = () => {
             App Connectors
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
-           Support
+            Support
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
             Trust Center
@@ -100,13 +102,14 @@ const Footer = () => {
             Mobile App
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Solutions</h4>
           <Link className="font-medium hover:opacity-75" href="#">
             Social Media
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
-             Digital Marketing
+            Digital Marketing
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
             Customer Service
@@ -115,6 +118,7 @@ const Footer = () => {
             For Developers
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Features</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -134,6 +138,7 @@ const Footer = () => {
             QR Code generation
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Products</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -146,6 +151,7 @@ const Footer = () => {
             Link-in-bio
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-semibold ">Legal</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -164,6 +170,7 @@ const Footer = () => {
             Code of Conduct
           </Link>
         </div>
+
         <div className="flex flex-col gap-1 text-sm lg:text-base ">
           <h4 className="font-bold ">Resources</h4>
           <Link className="font-medium hover:opacity-75" href="#">
@@ -176,7 +183,7 @@ const Footer = () => {
             Partners
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
-           Press
+            Press
           </Link>
           <Link className="font-medium hover:opacity-75" href="#">
             Contact
@@ -186,8 +193,11 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="p-3  md:flex md:justify-end">
-        <span className="text-sm font-bold">Terms of service | Security | Scissor 2023</span>
+
+      <div className="p-3 md:flex md:justify-end">
+        <span className="text-sm font-bold">
+          Terms of service | Security | Scissor 2023
+        </span>
       </div>
     </footer>
   );

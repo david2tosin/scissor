@@ -1,16 +1,62 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Nav from './components/Nav'
-import Faq from './components/Faq'
+import Image from "next/image";
+import Link from "next/link";
+import Faq from "./components/Faq";
+import UrlShortner from "./components/UrlShortner";
+
+const pricingOptions = [
+  {
+    plan: "Basic",
+    price: "Free",
+    description: "Free plan for all users",
+    features: [
+      "Unlimited URL Shortening",
+      "Basic Link Analytics",
+      "Customizable Short Links",
+      "Standard Support",
+      "Ad-supported",
+    ],
+  },
+
+  {
+    plan: "Professional",
+    price: "$15/Month",
+    description: "Ideal for business creators",
+    features: [
+      "Unlimited URL Shortening",
+      "Basic Link Analytics",
+      "Customizable Short Links",
+      "Standard Support",
+      "Ad-supported",
+    ],
+  },
+  {
+    plan: "Teams",
+    price: "$25/Month",
+    description: "Share with up to 10 users",
+    features: [
+      "Unlimited URL Shortening",
+      "Basic Link Analytics",
+      "Customizable Short Links",
+      "Standard Support",
+      "Ad-supported",
+    ],
+  },
+];
 
 export default function Home() {
   return (
-   <>
-     {/* hero section */}
-     <section  className="mt-[106px]">
+    <>
+      {/* hero section */}
+      <section className="py-[106px] relative h-full w-full">
+        <Image
+          src="/hero-bg.png"
+          alt=""
+          fill
+          className="object-fill md:object-cover object-bottom -z-20"
+        />
 
         <div className="max-w-5xl mx-auto px-4">
-          <h1 className="font-bold text-2xl lg:text-5xl text-center leading-loose">
+          <h1 className="font-bold text-2xl lg:text-5xl text-center lg:leading-loose">
             Optimize Your Online Experience with Our Advanced{" "}
             <span className="text-blue-600">URL Shortening</span> Solution
           </h1>
@@ -22,7 +68,7 @@ export default function Home() {
             engagement.
           </p>
 
-          <div className="mt-8 flex justify-center gap-2 ml-10 font-semibold">
+          <div className="mt-8 flex justify-center gap-2 font-semibold">
             <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors">
               Sign up
             </button>
@@ -135,19 +181,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* bottom image */}
-        <div className="relative mt-20 w-full h-[93px]">
-          <Image
-            src="/hero-img.png"
-            alt=""
-            fill
-            className="object-contain z-10"
-          />
-        </div>
-     </section>
 
-     <section id='features' className='mt-[50px]'>
-      <div className='flex flex-col justify-between max-w-5xl mx-auto bg-slate-100 md:flex-row gap-10 px-4 py-8'>
+      </section>
+
+      <section id="features">
+        <div className="bg-slate-100">
+          <div className="flex flex-col justify-between max-w-5xl mx-auto md:flex-row gap-10 px-4 py-8">
             <h2 className="font-bold text-3xl lg:text-4xl">
               One Stop. <br />
               Four <span className="text-blue-600">Possibilities</span>.
@@ -180,196 +219,142 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className='flex flex-col justify-between max-w-5xl mx-auto md:flex-row gap-10 px-4 py-32'>
-            <div className='space-y-4'>
-              <h2 className="font-bold text-3xl lg:text-4xl">
-                Why choose <span className="text-blue-600">Scissors</span>
-              </h2>
-              <p className='font-medium text-base'>
-                Scissors is the hub of everything that has to do with your link management. We shorten your URLs, allow you creating custom ones for your personal, business, event usage. Our swift QR code creation, management and usage tracking with advance analytics for all of these is second to none.
+        <div className="flex flex-col justify-between max-w-5xl mx-auto md:flex-row gap-10 px-4 py-32">
+          <div className="space-y-4">
+            <h2 className="font-bold text-3xl lg:text-4xl">
+              Why choose <span className="text-blue-600">Scissors</span>
+            </h2>
+            <p className="font-medium text-base">
+              Scissors is the hub of everything that has to do with your link
+              management. We shorten your URLs, allow you creating custom ones
+              for your personal, business, event usage. Our swift QR code
+              creation, management and usage tracking with advance analytics for
+              all of these is second to none.
+            </p>
+          </div>
+
+          <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 lg:mt-0">
+            <div>
+              <Image src="/url.svg" alt="url image" width={35} height={35} />
+              <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                URL Shortening
+              </h3>
+              <p className="font-medium">
+                Scissor allows you to shorten URLs of your business, events.
+                Shorten your URL at scale, URL redirects.
               </p>
             </div>
 
-            <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 lg:mt-0">
-              <div>
-                <Image
-                  src='/url.svg'
-                  alt='url image'
-                  width={35}
-                  height={35}
-                />
-                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
-                  URL Shortening
-                </h3>
-                <p className="font-medium">
-                  Scissor allows you to shorten URLs of your business, events.
-                  Shorten your URL at scale, URL redirects.
-                </p>
-              </div>
-
-              <div>
-                <Image
-                  src='/custom.svg'
-                  alt='custom image'
-                  width={35}
-                  height={35}
-                />
-                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
-                  Custom URLs
-                </h3>
-                <p className="font-medium">
-                  With Scissor, you can create custom URLs, with the length you
-                  want! A solution for socials and businesses.
-                </p>
-              </div>
-
-              <div>
-                <Image
-                  src='/qr.svg'
-                  alt='qr code image'
-                  width={35}
-                  height={35}
-                />
-                <h3 className="text-2xl lg:text-3xl font-semibold my-4">QR Codes</h3>
-                <p className="font-medium">
-                  Generate QR codes to your business, events. Bring your audience
-                  and customers to your doorstep with this scan and go solution.
-                </p>
-              </div>
-
-              <div>
-                <Image
-                src='/analytics.svg'
-                alt='analytics image'
+            <div>
+              <Image
+                src="/custom.svg"
+                alt="custom image"
                 width={35}
                 height={35}
-                />
-                <h3 className="text-2xl lg:text-3xl font-semibold my-4">
-                  Data Analytics
-                </h3>
-                <p className="font-medium">
-                  Receive data on the usage of either your shortened URL, custom
-                  URLs or generated QR codes. Embedded to monitor progress.
-                </p>
-              </div>
+              />
+              <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                Custom URLs
+              </h3>
+              <p className="font-medium">
+                With Scissor, you can create custom URLs, with the length you
+                want! A solution for socials and businesses.
+              </p>
+            </div>
+
+            <div>
+              <Image src="/qr.svg" alt="qr code image" width={35} height={35} />
+              <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                QR Codes
+              </h3>
+              <p className="font-medium">
+                Generate QR codes to your business, events. Bring your audience
+                and customers to your doorstep with this scan and go solution.
+              </p>
+            </div>
+
+            <div>
+              <Image
+                src="/analytics.svg"
+                alt="analytics image"
+                width={35}
+                height={35}
+              />
+              <h3 className="text-2xl lg:text-3xl font-semibold my-4">
+                Data Analytics
+              </h3>
+              <p className="font-medium">
+                Receive data on the usage of either your shortened URL, custom
+                URLs or generated QR codes. Embedded to monitor progress.
+              </p>
             </div>
           </div>
-     </section>
+        </div>
+      </section>
 
-      <section id='pricing' className='max-w-5xl mx-auto px-4 py-10 flex flex-col justify-center items-center gap-4'>
-        <div className='items-center'>
-          <h2 className="font-bold text-3xl text-center leading-loose lg:text-4xl">
-            A <span className="text-blue-600">price perfect</span> for your needs.
+      <section
+        id="pricing"
+        className="max-w-5xl mx-auto px-4 py-10 flex flex-col justify-center items-center gap-4"
+      >
+        <div className="max-w-xl mx-auto">
+          <h2 className="font-bold text-3xl text-center lg:text-4xl">
+            A <span className="text-blue-600">price perfect</span> for your
+            needs.
           </h2>
-          <p className='font-medium text-base text-center leading-loose'>
+
+          <p className="mt-2 font-medium text-center">
             From catering for your personal, business, event, socials needs, you
             can be rest assured we have you in mind in our pricing.
           </p>
         </div>
-        <div className='text-neutral-900 mx-auto p-6 md:flex justify-center'>
-          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
-            <div className='my-4'>
-              <p className='font-medium'>Basic</p>
-              <h2 className='font-bold text-4xl'>Free</h2>
-              <h3 className='font-medium text-xl'>Free plan for all users</h3>
-            </div>
-            <ul className='font-medium text-base'>
-              <li className="m-2">
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Unlimited URL Shortening
-              </li>
-              <li className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Basic Link Analytics
-              </li>
-              <li className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Customizable Short Links
-              </li>
-              <li className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Standard Support
-              </li>
-              <li className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Ad-supported
-              </li>
-            </ul>
-          </div>
-          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
-            <div className='my-4'>
-              <p className='font-medium'>Professional</p>
-              <h2 className='font-bold text-4xl'>$15/month</h2>
-              <h3 className='font-medium text-xl'>Ideal for business creators</h3>
-            </div>
-            <div className='font-medium text-base'>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Enhanced Link Analytics
-              </span>
-              <span className="m-2">
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Custom Branded Domains
-              </span>
-              <span className="m-2">
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Advanced Link Customization
-              </span>
-              <span className="m-2">
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Priority Support
-              </span>
-              <span className="m-2">
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Ad-free Experience
-              </span>
-            </div>
-          </div>
 
-          <div className="border-solid border-2 border-sky-500 rounded-md mx-2 mb-4 p-10  hover:bg-slate-800 hover:text-slate-50 hover:rounded-lg">
-            <div className='my-4'>
-              <p className='font-medium'>Teams</p>
-              <h2 className='font-bold text-4xl'>$25/month</h2>
-              <h3 className='font-medium text-xl'>Share with up to 10 users</h3>
+        <div className="lg:my-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {pricingOptions.map((option) => (
+            <div
+              key={option.plan}
+              className="w-full border px-12 pt-4 pb-12 border-sky-500 rounded-md hover:bg-slate-800 hover:text-slate-50 hover:scale-[1.15] transition-all duration-300 ease-in-out"
+            >
+              <div>
+                <p className="font-medium lg:text-2xl">{option.plan}</p>
+                <p className="mt-4 font-bold text-4xl">{option.price}</p>
+                <p className="mt-2 font-medium lg:text-xl">
+                  {option.description}
+                </p>
+              </div>
+
+              <ul className="space-y-6">
+                {option.features.map((feature) => (
+                  <li key={feature} className="mt-4 flex gap-2 items-center">
+                    <Image
+                      src="/check-circle.svg"
+                      width={16}
+                      height={16}
+                      alt="check mark"
+                    />
+
+                    <span className="font-medium text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className='font-medium text-base'>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Team Collaboration
-              </span>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                User Roles and Permissions
-              </span>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Enhanced Security
-              </span>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                API Access
-              </span>
-              <span className="m-2">
-                {" "}
-                <Image src='/check-circle.svg' width={16} height={16} alt='check mark'/>
-                Dedicated Account Manager
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
-        <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors">Select Pricing</button>
-    </section>
-    <Faq />
-   </>
-  )
+
+        <div className="mt-4 flex flex-col lg:flex-row gap-3">
+          <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-full">
+            Get Custom Pricing
+          </button>
+
+          <button className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors">
+            Select Pricing
+          </button>
+        </div>
+      </section>
+
+      <UrlShortner />
+
+      <Faq />
+    </>
+  );
 }

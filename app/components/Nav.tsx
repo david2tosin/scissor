@@ -1,48 +1,50 @@
-'use client'
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { cn } from "../utils"
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { cn } from "../utils";
 
 const Nav = () => {
-
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
-    setMenuOpen(!menuOpen)
-  }
+    setMenuOpen(!menuOpen);
+  };
   return (
-   <nav className="fixed w-full z-50 top-0 left-0 bg-white shadow-md">
-    <div className="flex justify-between max-w-7xl mx-auto items-center w-full h-full px-4 py-3">
-     <Link href="/" className="flex gap-2 flex-center focus:outline-none focus-visible:ring-4 ring-neutral-600 rounded-sm ring-offset-4 hover:opacity-75 transition-opacity">
-        <Image
-        src="/logo.svg"
-        alt="Scissor"
-        width={30}
-        height={30}
-        className="object-contain"
-        />
-        <p className="text-2xl font-semibold tracking-wide text-blue-600">
-          Scissor
-        </p>
+    <nav className="sticky w-full z-50 top-0 left-0 bg-white shadow-md">
+      <div className="flex justify-between max-w-7xl mx-auto items-center w-full h-full px-4 py-3">
+        <Link
+          href="/"
+          className="flex gap-2 flex-center focus:outline-none focus-visible:ring-4 ring-neutral-600 rounded-sm ring-offset-4 hover:opacity-75 transition-opacity"
+        >
+          <Image
+            src="/logo.svg"
+            alt="Scissor"
+            width={30}
+            height={30}
+            className="object-contain"
+          />
+          <p className="text-2xl font-semibold tracking-wide text-blue-600">
+            Scissor
+          </p>
+        </Link>
 
-      </Link>
-
-      <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center">
           <div>
             <ul className="hidden sm:flex sm:gap-10">
-              <li >
-                <Link href='/myurls' className="text-blue-600">My URLs
+              <li>
+                <Link href="/myurls" className="text-blue-600">
+                  My URLs
                 </Link>
               </li>
               <li>
-                <Link href='#features'>Features</Link>
+                <Link href="#features">Features</Link>
               </li>
               <li>
-                <Link href='#pricing'>Pricing</Link>
+                <Link href="#pricing">Pricing</Link>
               </li>
               <li>
-                <Link href='#faqs'>FAQs</Link>
+                <Link href="#faqs">FAQs</Link>
               </li>
             </ul>
           </div>
@@ -83,14 +85,13 @@ const Nav = () => {
         </button>
       </div>
 
-     <div
+      <div
         className={cn(
           "fixed left-0 w-3/4 sm:hidden h-screen -translate-x-full z-50 bg-blue-600 top-0 p-10 ease-in duration-500",
           { "translate-x-0": menuOpen }
         )}
       ></div>
-
-   </nav>
-  )
-}
-export default Nav
+    </nav>
+  );
+};
+export default Nav;
